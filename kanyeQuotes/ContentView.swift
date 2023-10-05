@@ -44,13 +44,14 @@ struct ContentView: View {
                         image
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 300, height: 400)
+                            .frame(width: 300, height: 440)
                     default:
                         EmptyView() // Placeholder or loading view
                     }
                 }
-                    .frame(width: 300, height: 400)
-//                Spacer()
+                    .frame(width: 300, height: 440)
+                    .border(.red)
+                Spacer()
                 if let quote = quotes.quote {
                     Text(quote)
                         .font(.title)
@@ -61,7 +62,7 @@ struct ContentView: View {
                     AnimationView()
                 }
                 Spacer()
-//                Spacer()
+                Spacer()
                 
             }
             .navigationTitle("ye's quotes")
